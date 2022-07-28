@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "pessoas.c"
 
 void registrar(Pessoa p, char *nome_arquivo)
 {

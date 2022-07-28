@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "pessoas.c"
 
 void imprimir(Pessoa p, char *nome_arquivo)
 {
