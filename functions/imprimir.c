@@ -1,6 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-
 void imprimir(Pessoa p, char *nome_arquivo)
 {
     FILE *f = fopen(nome_arquivo, "rb");

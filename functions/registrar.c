@@ -1,6 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-
 void registrar(Pessoa p, char *nome_arquivo)
 {
     printf("Digite seu nome: ");
