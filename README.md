@@ -1,6 +1,6 @@
 # MillionShow
 
-MillionShow is a game inspired by the popular Brazilian TV show "Show do Milhão" hosted by Silvio Santos. It features a series of authentic questions that were actually asked on the show, along with some Easter eggs from Brazilian popular culture. The game utilizes a graphical user interface powered by JOptionPane.
+MillionShow is a game inspired by the popular Brazilian TV show ["Show do Milhão"](https://pt.wikipedia.org/wiki/Show_do_Milh%C3%A3o) hosted by Silvio Santos. It features a series of authentic questions that were actually asked on the show, along with some Easter eggs from Brazilian popular culture. The game utilizes a graphical user interface powered by [JOptionPane](https://docs.oracle.com/javase/8/docs/api/javax/swing/JOptionPane.html).
 
 ## Prerequisites
 
