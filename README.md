@@ -15,21 +15,21 @@ To get started with MillionShow, follow these steps:
    git clone https://github.com/lfelipediniz/MillionShow.git
    ```
 
-2. **Open the project:**
-   - Open your preferred Java IDE.
-   - Import the MillionShow project into the IDE.
+2. **Open project:**
+   ```bash
+   cd MillionShow
+   ```
 
-3. **Run the application: (with IDE)**
-   - Navigate to the `MillionShow` class.
-   - Run the `main` method to start the game.
+3. **Compile the Game:**
+    ```bash
+    javac MillionShow.java
+    ```
 
-4. **Run using only the terminal:**
-   -    ```bash
-        javac MillionShow.java
-        ```
-   -    ```bash
-        java MillionShow
-        ```
+4. **Run:**
+
+    ```bash
+    java MillionShow
+    ```
 
 ## Gameplay
 
