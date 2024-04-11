@@ -2,183 +2,188 @@ import javax.swing.JOptionPane;
 import javax.swing.ImageIcon;
 
 public class MillionShow {
-    public static void main(String args[]) {
-        ImageIcon logo = new ImageIcon("images/logo.png");
+   public static void main(String args[]) {
+      ImageIcon logo = new ImageIcon("images/logo.png");
 
-        String[] selection = { "Comecar" };
+      String[] selection = { "Comecar" };
 
-        // show the welcome message
-        int welcome = JOptionPane.showOptionDialog(null,
-                "Voce esta preparadoª para ser desafiado por Silvio, com perguntas de conhecimentos gerais, e ter a chance de ganhar 1 milhão?",
-                "Show do Milhao", JOptionPane.DEFAULT_OPTION,
-                JOptionPane.QUESTION_MESSAGE, logo, selection, selection[0]);
+      // show the welcome message
+      int welcome = JOptionPane.showOptionDialog(null,
+            "Voce esta preparadoª para ser desafiado por Silvio, com perguntas de conhecimentos gerais, e ter a chance de ganhar 1 milhão?",
+            "Show do Milhao", JOptionPane.DEFAULT_OPTION,
+            JOptionPane.QUESTION_MESSAGE, logo, selection, selection[0]);
 
-        if (welcome != 0) {
-            exit();
-        }
+      if (welcome != 0) {
+         exit();
+      }
 
-        ImageIcon silvio1 = new ImageIcon("images/silvio1.png");
-        
-        // ask for the user's name
-        Object scanInput = JOptionPane.showInputDialog(null,
-                "Maoeee! Bem vindo ao Show do Milhao, antes de iniciar as perguntas me conte, qualeh seu nome queridoª?",
-                "Conhecendo Silvio", JOptionPane.INFORMATION_MESSAGE, silvio1, null, "");
+      ImageIcon silvio1 = new ImageIcon("images/silvio1.png");
 
-        if (scanInput == null) {
-            scanInput = "fulano";
-        }
+      // ask for the user's name
+      Object scanInput = JOptionPane.showInputDialog(null,
+            "Maoeee! Bem vindo ao Show do Milhao, antes de iniciar as perguntas me conte, qualeh seu nome queridoª?",
+            "Conhecendo Silvio", JOptionPane.INFORMATION_MESSAGE, silvio1, null, "");
 
-        ImageIcon silvio2 = new ImageIcon("images/silvio2.png");
+      if (scanInput == null || scanInput.equals("")) {
+         scanInput = "fulano";
+      }
 
-        Object[] alternatives1 = { "Lenin", "Gorbatchov", "Karl Marx", "Allan Kardec" };
+      ImageIcon silvio2 = new ImageIcon("images/silvio2.png");
 
-        // first question
-        Object question1 = JOptionPane.showInputDialog(null,
-                "HiHiHiHi, certo " + scanInput
-                        + " vamos começar! Primeira Pergunta... Quem é o autor do manisfesto comunista?",
-                "Primeira Pergunta - Valendo 250 mil", JOptionPane.QUESTION_MESSAGE, silvio2, alternatives1, alternatives1[0]);
+      Object[] alternatives1 = { "Lenin", "Gorbatchov", "Karl Marx", "Allan Kardec" };
 
-        if (question1 != "Karl Marx") {
-            exit();
-        }
+      // first question
+      Object question1 = JOptionPane.showInputDialog(null,
+            "HiHiHiHi, certo " + scanInput
+                  + " vamos começar! Primeira Pergunta... Quem é o autor do manisfesto comunista?",
+            "Primeira Pergunta - Valendo 250 mil", JOptionPane.QUESTION_MESSAGE, silvio2, alternatives1,
+            alternatives1[0]);
 
-        ImageIcon silvio3 = new ImageIcon("images/silvio3.png");
+      if (question1 != "Karl Marx") {
+         exit();
+      }
 
-        Object[] alternatives2 = { "Astigmatismo", "Pedofilia", "Vitiligo", "Bruxismo" };
+      ImageIcon silvio3 = new ImageIcon("images/silvio3.png");
 
-        // second question
-        Object question2 = JOptionPane.showInputDialog(null, "Muito bem " + scanInput
-                + " vamos para próxima... Como se chama a doença que causou o clariamento da pele de Michael Jackson?",
-                "Segunda Pergunta - Valendo 500 mil", JOptionPane.QUESTION_MESSAGE, silvio3, alternatives2, alternatives2[0]);
+      Object[] alternatives2 = { "Astigmatismo", "Pedofilia", "Vitiligo", "Bruxismo" };
 
-        if (question2 != "Vitiligo") {
-            exit();
-        }
+      // second question
+      Object question2 = JOptionPane.showInputDialog(null, "Muito bem " + scanInput
+            + " vamos para próxima... Como se chama a doença que causou o clariamento da pele de Michael Jackson?",
+            "Segunda Pergunta - Valendo 500 mil", JOptionPane.QUESTION_MESSAGE, silvio3, alternatives2,
+            alternatives2[0]);
 
-        ImageIcon silvio5 = new ImageIcon("images/silvio5.png");
+      if (question2 != "Vitiligo") {
+         exit();
+      }
 
-        Object[] alternatives3 = { "Jabuti", "Onça", "Arara", "Tucano" };
+      ImageIcon silvio5 = new ImageIcon("images/silvio5.png");
 
-        // third question
-        Object question3 = JOptionPane.showInputDialog(null,
-                "Maoeeeeee as coisas entao esquentando " + scanInput
-                        + " mais uma pergunta... Que animal da fauna brasileira esta retratado na nota de dez reais?",
-                "Terceira Pergunta - Valendo 750 mil", JOptionPane.QUESTION_MESSAGE, silvio5, alternatives3, alternatives3[0]);
+      Object[] alternatives3 = { "Jabuti", "Onça", "Arara", "Tucano" };
 
-        if (question3 != "Arara") {
-            exit();
-        }
+      // third question
+      Object question3 = JOptionPane.showInputDialog(null,
+            "Maoeeeeee as coisas entao esquentando " + scanInput
+                  + " mais uma pergunta... Que animal da fauna brasileira esta retratado na nota de dez reais?",
+            "Terceira Pergunta - Valendo 750 mil", JOptionPane.QUESTION_MESSAGE, silvio5, alternatives3,
+            alternatives3[0]);
 
-        ImageIcon maisa1 = new ImageIcon("images/maisa1.png");
+      if (question3 != "Arara") {
+         exit();
+      }
 
-        String[] alternatives4 = { "Continuar" };
+      ImageIcon maisa1 = new ImageIcon("images/maisa1.png");
 
-        // fourth question by Maisa
-        int question4 = JOptionPane.showOptionDialog(null, "Silvioo eu tenho uma perguntaa!!", "Quee, Maisa?",
-                JOptionPane.DEFAULT_OPTION,
-                JOptionPane.QUESTION_MESSAGE, maisa1, alternatives4, alternatives4[0]);
+      String[] alternatives4 = { "Continuar" };
 
-        if (question4 != 0) {
-            exit();
-        }
+      // fourth question by Maisa
+      int question4 = JOptionPane.showOptionDialog(null, "Silvioo eu tenho uma perguntaa!!", "Quee, Maisa?",
+            JOptionPane.DEFAULT_OPTION,
+            JOptionPane.QUESTION_MESSAGE, maisa1, alternatives4, alternatives4[0]);
 
-        ImageIcon silvio6 = new ImageIcon("images/silvio6.png");
+      if (question4 != 0) {
+         exit();
+      }
 
-        String[] alternatives5 = { "Continuar" };
+      ImageIcon silvio6 = new ImageIcon("images/silvio6.png");
 
-        // Maisa continues
-        int question5 = JOptionPane.showOptionDialog(null, "HiHiHiHi pode fala Maisa!", "Quee, Maisa?",
-                JOptionPane.DEFAULT_OPTION,
-                JOptionPane.QUESTION_MESSAGE, silvio6, alternatives5, alternatives5[0]);
+      String[] alternatives5 = { "Continuar" };
 
-        if (question5 != 0) {
-            exit();
-        }
+      // Maisa continues
+      int question5 = JOptionPane.showOptionDialog(null, "HiHiHiHi pode fala Maisa!", "Quee, Maisa?",
+            JOptionPane.DEFAULT_OPTION,
+            JOptionPane.QUESTION_MESSAGE, silvio6, alternatives5, alternatives5[0]);
 
-        ImageIcon maisa2 = new ImageIcon("images/maisa2.png");
+      if (question5 != 0) {
+         exit();
+      }
 
-        Object[] alternatives6 = { "Touca", "Peruca", "Everson Zoio", "Torradeira" };
+      ImageIcon maisa2 = new ImageIcon("images/maisa2.png");
 
-        // Maisa's bonus question
-        Object question6 = JOptionPane.showInputDialog(null,
-                "Então " + scanInput + ", minha pergunta de ouro é... O que o Silvio usa na cabeça?",
-                "Quarta Pergunta - Pergunta Bônus", JOptionPane.QUESTION_MESSAGE, maisa2, alternatives6, alternatives6[0]);
+      Object[] alternatives6 = { "Touca", "Peruca", "Everson Zoio", "Torradeira" };
 
-        if (question6 != "Peruca") {
-            exitMaisa();
-        }
+      // Maisa's bonus question
+      Object question6 = JOptionPane.showInputDialog(null,
+            "Então " + scanInput + ", minha pergunta de ouro é... O que o Silvio usa na cabeça?",
+            "Quarta Pergunta - Pergunta Bônus", JOptionPane.QUESTION_MESSAGE, maisa2, alternatives6, alternatives6[0]);
 
-        ImageIcon silvio7 = new ImageIcon("images/silvio7.png");
+      if (question6 != "Peruca") {
+         exitMaisa();
+      }
 
-        Object[] alternatives7 = { "Diana", "Lois Lane", "Jane", "Chita" };
+      ImageIcon silvio7 = new ImageIcon("images/silvio7.png");
 
-        // fifth question
-        Object question7 = JOptionPane.showInputDialog(null, "Ok maisa, flw... Qual é nome da mulher do Tarzan?",
-                "Quinta Pergunta - Valendo 800 mil", JOptionPane.QUESTION_MESSAGE, silvio7, alternatives7, alternatives7[0]);
+      Object[] alternatives7 = { "Diana", "Lois Lane", "Jane", "Chita" };
 
-        if (question7 != "Jane") {
-            exit();
-        }
+      // fifth question
+      Object question7 = JOptionPane.showInputDialog(null, "Ok maisa, flw... Qual é nome da mulher do Tarzan?",
+            "Quinta Pergunta - Valendo 800 mil", JOptionPane.QUESTION_MESSAGE, silvio7, alternatives7,
+            alternatives7[0]);
 
-        ImageIcon silvio8 = new ImageIcon("images/silvio8.png");
+      if (question7 != "Jane") {
+         exit();
+      }
 
-        Object[] alternatives8 = { "Chiquita Bacana", "Chiquinha Gonzaga", "Chica da Silva", "Chiquititas" };
+      ImageIcon silvio8 = new ImageIcon("images/silvio8.png");
 
-        // sixth question
-        Object question8 = JOptionPane.showInputDialog(null,
-                "Voce esta conseguindo hein, vamos ver se consegue passar dessa... Que compositora brasileira fez sucesso com a sua marchinha 'Abre Alas'? ",
-                "Sexta Pergunta - Valendo 900 mil", JOptionPane.QUESTION_MESSAGE, silvio8, alternatives8, alternatives8[0]);
+      Object[] alternatives8 = { "Chiquita Bacana", "Chiquinha Gonzaga", "Chica da Silva", "Chiquititas" };
 
-        if (question8 != "Chiquinha Gonzaga") {
-            exit();
-        }
+      // sixth question
+      Object question8 = JOptionPane.showInputDialog(null,
+            "Voce esta conseguindo hein, vamos ver se consegue passar dessa... Que compositora brasileira fez sucesso com a sua marchinha 'Abre Alas'? ",
+            "Sexta Pergunta - Valendo 900 mil", JOptionPane.QUESTION_MESSAGE, silvio8, alternatives8, alternatives8[0]);
 
-        ImageIcon silvio9 = new ImageIcon("images/silvio9.png");
+      if (question8 != "Chiquinha Gonzaga") {
+         exit();
+      }
 
-        Object[] alternatives9 = { "13", "15", "14", "16" };
+      ImageIcon silvio9 = new ImageIcon("images/silvio9.png");
 
-        // seventh question
-        Object question9 = JOptionPane.showInputDialog(null,
-                "Carambolas voce nao erra uma! Quantas letras contem a escrita da bandeira nacional brasileira?",
-                "Setima Pergunta - Valendo 950 mil", JOptionPane.QUESTION_MESSAGE, silvio9, alternatives9, alternatives9[0]);
+      Object[] alternatives9 = { "13", "15", "14", "16" };
 
-        if (question9 != "15") {
-            exit();
-        }
+      // seventh question
+      Object question9 = JOptionPane.showInputDialog(null,
+            "Carambolas voce nao erra uma! Quantas letras contem a escrita da bandeira nacional brasileira?",
+            "Setima Pergunta - Valendo 950 mil", JOptionPane.QUESTION_MESSAGE, silvio9, alternatives9,
+            alternatives9[0]);
 
-        ImageIcon silvio4 = new ImageIcon("images/silvio4.png");
+      if (question9 != "15") {
+         exit();
+      }
 
-        Object[] alternatives10 = { "Corra", "Ande", "Pense", "Fale" };
+      ImageIcon silvio4 = new ImageIcon("images/silvio4.png");
 
-        // final question for the million
-        Object question10 = JOptionPane.showInputDialog(null,
-                "Que  rufem os tambores... Pergunta valhendo 1 milhao! Segundo a lenda, ao terminar de esculpir Moises Michelangelo fez qual pedido a estatua?",
-                "Terceira Pergunta - Valendo 1 milhão", JOptionPane.QUESTION_MESSAGE, silvio4, alternatives10,
-                alternatives10[0]);
+      Object[] alternatives10 = { "Corra", "Ande", "Pense", "Fale" };
 
-        if (question10 != "Fale") {
-            exit();
-        }
+      // final question for the million
+      Object question10 = JOptionPane.showInputDialog(null,
+            "Que  rufem os tambores... Pergunta valhendo 1 milhao! Segundo a lenda, ao terminar de esculpir Moises Michelangelo fez qual pedido a estatua?",
+            "Terceira Pergunta - Valendo 1 milhão", JOptionPane.QUESTION_MESSAGE, silvio4, alternatives10,
+            alternatives10[0]);
 
-        // game completed
-        ImageIcon silvioMoney = new ImageIcon("images/silviograna.png");
+      if (question10 != "Fale") {
+         exit();
+      }
 
-        JOptionPane.showMessageDialog(null, "*Silvao lhe entrega o pacote enquanto admira sua inteligencia",
-                "Voce ganhou 1 milhao!", JOptionPane.PLAIN_MESSAGE, silvioMoney);
-    }
+      // game completed
+      ImageIcon silvioMoney = new ImageIcon("images/silviograna.png");
 
-    static void exit() {
-        ImageIcon silvioSad = new ImageIcon("images/silviotristo.png");
-        JOptionPane.showMessageDialog(null,
-                "Voce decepcionou tanto Silvão, que ele foi obrigado a expulsa-loª do programa sem nada!", "perdeu",
-                JOptionPane.WARNING_MESSAGE, silvioSad);
-        System.exit(0);
-    }
+      JOptionPane.showMessageDialog(null, "*Silvao lhe entrega o pacote enquanto admira sua inteligencia",
+            "Voce ganhou 1 milhao!", JOptionPane.PLAIN_MESSAGE, silvioMoney);
+   }
 
-    static void exitMaisa() {
-        ImageIcon maisaSad = new ImageIcon("images/maisa3.png");
-        JOptionPane.showMessageDialog(null, "Oh la, eh muito burro Silvio!", "perdeu", JOptionPane.WARNING_MESSAGE,
-                maisaSad);
-        System.exit(0);
-    }
+   static void exit() {
+      ImageIcon silvioSad = new ImageIcon("images/silviotristo.png");
+      JOptionPane.showMessageDialog(null,
+            "Voce decepcionou tanto Silvão, que ele foi obrigado a expulsa-loª do programa sem nada!", "perdeu",
+            JOptionPane.WARNING_MESSAGE, silvioSad);
+      System.exit(0);
+   }
+
+   static void exitMaisa() {
+      ImageIcon maisaSad = new ImageIcon("images/maisa3.png");
+      JOptionPane.showMessageDialog(null, "Oh la, eh muito burro Silvio!", "perdeu", JOptionPane.WARNING_MESSAGE,
+            maisaSad);
+      System.exit(0);
+   }
 }
